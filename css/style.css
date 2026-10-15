@@ -1,10 +1,55 @@
 body {
     margin: 0;
-    font-family: "nixieone";
+    font-family: "Nixie One";
     font-size: 12px;
+    color: #950E0E;
     background-color: #FBE4E4;
 }
 
-html {
-    scroll-behavior: smooth;
+/*hero section*/
+h1{
+    font-size: 90px;
+    text-align: center;
+    font-weight: 400;
+    margin: 0;
+    padding: 50px;
+}
+
+.main-hero-img {
+    display: block;
+    width: 30%;
+    height: 30%;
+    margin: 0 auto;
+
+    transform: rotate(0deg) scale(1);
+    transform-origin: center;
+    will-change: transform;
+} 
+
+.main-hero p {
+    text-align: center;
+    font-size: 24px;
+    margin: 0;
+    padding: 40px;
+    font-weight: 400;
+}
+
+
+/*story section*/
+.story {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #950E0E;
+}
+
+.story-photos {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.story-photos img {
+    width: 45%;
+    height: auto;
 }
