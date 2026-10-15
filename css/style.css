@@ -1,0 +1,10 @@
+body {
+    margin: 0;
+    font-family: "nixieone";
+    font-size: 12px;
+    background-color: #FBE4E4;
+}
+
+html {
+    scroll-behavior: smooth;
+}
