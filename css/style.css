@@ -37,19 +37,112 @@ h1{
 
 /*story section*/
 .story {
-    text-align: center;
+    position: relative;
     padding: 50px 0;
+    clear: both;
     background-color: #950E0E;
 }
 
+.story-reveal {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.story-text {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    text-align: center;
+    margin-top: 20px;
+
+    color:#FBE4E4;
+    font-size: 24px;
+    line-height: 1.7;
+}
+
+.story-text p {
+    margin-bottom: 20px;
+}
+
 .story-photos {
+    position: relative;
     display: flex;
     justify-content: center;
     gap: 40px;
-    margin-top: 40px;
+    margin-top: 150px;
+    z-index: 2;
+    will-change: transform;
 }
 
 .story-photos img {
     width: 45%;
     height: auto;
+}
+
+.story-photo1 {
+    left: 0;
+}
+
+.story-photo2 {
+    right: 0;
+}
+
+
+
+/*information section*/
+.information {  
+    padding: 80px 20px;
+    text-align: center;
+
+    background-color: #FBE4E4;
+    width: 100%;
+    height: 100vh;
+}
+
+.information-content {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;   
+}
+
+.information h2 {
+    font-size: 90px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 100px;
+}
+
+.info-item {
+    flex: 1;
+    min-width: 180px;
+}
+
+.info-button {
+    background-color: #950E0E;
+    color: #FBE4E4;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-family: "Nixie One";
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.info-button:hover {
+    background-color: #706179;
+    color: #FBE4E4;
+}
+
+.info-details {
+    margin-top: 10px;
 }

@@ -25,3 +25,54 @@ window.addEventListener("scroll", updateImageTransform);
 window.addEventListener("resize", updateImageTransform);
 
 updateImageTransform();
+
+
+
+const story = document.querySelector(".story-reveal");
+const leftDoor = document.querySelector(".story-photo1");
+const rightDoor = document.querySelector(".story-photo2");
+
+function updateStoryDoors() {
+    if (!story || !leftDoor || !rightDoor) return;
+
+    const rect = story.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+
+    // Progress from 0 (closed) to 1 (fully open)
+  const scrollDistance = window.innerHeight * 1.4;
+
+const progress = Math.max(
+    0,
+    Math.min(
+        1,
+        (windowHeight * 0.8 - rect.top) / scrollDistance
+    )
+);
+
+    // Slide each image outwards
+    leftDoor.style.transform =
+        `translateX(${-progress * 100}%)`;
+
+    rightDoor.style.transform =
+        `translateX(${progress * 100}%)`;
+}
+
+window.addEventListener("scroll", updateStoryDoors);
+window.addEventListener("resize", updateStoryDoors);
+
+updateStoryDoors();
+
+
+
+const infoButtons = document.querySelectorAll(".info-button");
+
+infoButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        const details = button.nextElementSibling;
+        const isOpen = button.getAttribute("aria-expanded") === "true";
+
+        details.hidden = isOpen;
+        button.setAttribute("aria-expanded", String(!isOpen));
+    });
+});
+
