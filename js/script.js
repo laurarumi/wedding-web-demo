@@ -64,6 +64,7 @@ updateStoryDoors();
 
 
 
+
 const infoButtons = document.querySelectorAll(".info-button");
 
 infoButtons.forEach(button => {
@@ -71,8 +72,23 @@ infoButtons.forEach(button => {
         const details = button.nextElementSibling;
         const isOpen = button.getAttribute("aria-expanded") === "true";
 
-        details.hidden = isOpen;
-        button.setAttribute("aria-expanded", String(!isOpen));
+        if (isOpen) {
+            details.classList.remove("is-open");
+            button.setAttribute("aria-expanded", "false");
+
+            setTimeout(() => {
+                details.hidden = true;
+            }, 300);
+        } else {
+            details.hidden = false;
+
+            // Allow the browser to apply the initial styles first
+            requestAnimationFrame(() => {
+                details.classList.add("is-open");
+            });
+
+            button.setAttribute("aria-expanded", "true");
+        }
     });
 });
 

@@ -132,7 +132,7 @@ h1{
     border: none;
     border-radius: 20px;
     padding: 10px 20px;
-    font-size: 20px;
+    font-size: 24px;
     font-family: "Nixie One";
     font-weight: 600;
     cursor: pointer;
@@ -145,4 +145,31 @@ h1{
 
 .info-details {
     margin-top: 10px;
+    opacity: 0;
+    transform: translateY(-8px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.info-details.is-open {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.info-details p {
+    margin: 0;
+    font-size: 24px;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+.info-details a {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 18px;
+    color: #950E0E;
+    text-decoration: underline;
+}
+
+.info-details a:hover {
+    color: #706179;
 }
