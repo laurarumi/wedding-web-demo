@@ -180,3 +180,138 @@ h1{
 .info-details a:hover {
     color: #706179;
 }
+
+
+/*rsvp section*/
+.rsvp {
+    padding: 80px 20px;
+    background-color: #706179;
+    color: #FBE4E4;
+    text-align: center;
+}
+
+.rsvp h2 {
+    font-size: 90px;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+
+.rsvp p {
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+.rsvp-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    accent-color: #FBE4E4;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 40px;
+}
+
+.rsvp-form label {
+    font-size: 24px;
+    text-align: left;
+    width: 100%;
+    max-width: 400px;
+}
+
+.rsvp-form legend {
+    font-size: 24px;
+    text-align: left;
+    width: 100%;
+    max-width: 400px;
+}
+
+.rsvp-form .attendance-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 400px;
+    text-align: left;
+}
+
+.rsvp-form .attendance-option input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+
+    width: 22px;
+    height: 22px;
+    border: 2px solid #FBE4E4;
+    border-radius: 50%;
+    background-color: #FBE4E4;
+
+    display: grid;
+    place-content: center;
+    flex-shrink: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+.rsvp-form .attendance-option input[type="radio"]::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #950E0E;
+    transform: scale(0);
+    transition: transform 0.15s ease-in-out;
+}
+
+.rsvp-form .attendance-option input[type="radio"]:checked::before {
+    transform: scale(1);
+}
+
+.rsvp-form .attendance-option input[type="radio"]:hover {
+    border-color: #950E0E;
+}
+
+.rsvp-form .attendance-option input[type="radio"]:focus-visible {
+    outline: 2px solid #FBE4E4;
+    outline-offset: 3px;
+}
+
+.rsvp-form input,
+.rsvp-form textarea {
+    font-family: 'Nixie One', cursive;
+    font-weight: 600;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: none;
+    width: 100%;
+    max-width: 400px;
+    background-color: #FBE4E4;
+    color: #950E0E;
+}
+
+.rsvp-form input:focus,
+.rsvp-form textarea:focus {
+    outline: 2px solid #950E0E;
+    outline-offset: 2px;
+}
+
+.rsvp-form button {
+    background-color: #FBE4E4;
+    color: #950E0E;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.rsvp-form button:hover {
+    background-color: #950E0E;
+    color: #FBE4E4;
+}

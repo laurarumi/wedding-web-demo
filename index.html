@@ -93,19 +93,24 @@
 
         <div class="rsvp-content">
             <h2>VINDRÀS?</h2>
-            <p>Confirmeu la vostra assistència abans del 1 de juliol de 2027.</p>
+            <p>Confirmeu la vostra assistència abans del 30 de juliol de 2027.</p>
 
-            <form class="rsvp-form">   
+            <form class="rsvp-form"> 
+
+                <div class="form-group">
                 <label for="name">Nom:</label>
                 <input type="text" id="name" name="name" placeholder="El teu nom" required>
+                </div>
 
+                <div class="form-group">
                 <label for="guests">Nombre de convidats:</label>
                 <input type="number" id="guests" name="guests" placeholder="quants sareu?" min="1" required>
-
+                </div>
     
+                <div class="form-group">
         <legend>Vindràs?</legend>
 
-        <label>
+        <label class="attendance-option">
           <input
             type="radio"
             name="attendance"
@@ -115,18 +120,19 @@
           Hi tant!
         </label>
 
-        <label>
+        <label class="attendance-option">
           <input
             type="radio"
             name="attendance"
             value="no"
           >
-          Em sap greu però no podré assistir
+          Ostres, no puc!
         </label>
-   
+                </div>
 
+                <div class="form-group">
       <label for="dietary">
-        Requeriments dietètics (opcional)
+        Requeriments dietètics (opcional):
       </label>
       <textarea
         id="dietary"
@@ -134,8 +140,10 @@
         placeholder="Què hem de tenir en compte?"
         rows="3"
       ></textarea>
+                </div>
 
-         <label for="song">
+                <div class="form-group">
+      <label for="song">
         Quina cançó t'agradaria escoltar a la festa?
       </label>
       <textarea
@@ -144,6 +152,7 @@
         placeholder="Escriu la teva cançó preferida"
         rows="3"
       ></textarea>
+                </div>
 
 
                 <button type="submit">Enviar</button>
