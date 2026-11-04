@@ -98,7 +98,7 @@ h1{
 
 /*information section*/
 .information {  
-    padding: 80px 20px;
+    padding: 50px 20px;
     text-align: center;
 
     background-color: #FBE4E4;
@@ -124,8 +124,8 @@ h1{
     font-size: 90px;
     font-weight: 400;
     text-align: center;
-    margin-bottom: 40px;
-    margin-top: 100px;
+    margin-bottom: 80px;
+    margin-top: 50px;
 }
 
 .info-item {
@@ -184,7 +184,7 @@ h1{
 
 /*rsvp section*/
 .rsvp {
-    padding: 80px 20px;
+    padding: 50px 20px;
     background-color: #706179;
     color: #FBE4E4;
     text-align: center;
@@ -193,12 +193,12 @@ h1{
 .rsvp h2 {
     font-size: 90px;
     font-weight: 400;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .rsvp p {
     font-size: 24px;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 }
 
 .rsvp-form {
@@ -314,4 +314,36 @@ h1{
 .rsvp-form button:hover {
     background-color: #950E0E;
     color: #FBE4E4;
+}
+
+
+
+/* Footer */
+footer {
+    background-color: #950E0E;
+    color: #FBE4E4;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.footer-message {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+    padding-bottom: 20px;
+}
+
+.credit {
+    font-size: 14px;
+    margin: 0;
+}
+
+.credit a {
+    color: #FBE4E4;
+    text-decoration: none;
+}
+
+.credit img {
+    vertical-align: middle;
+    margin-left: 5px; 
 }
