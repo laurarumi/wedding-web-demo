@@ -15,44 +15,74 @@ body {
 .decoration {
     position: absolute;
     pointer-events: none;
+    animation: twinkle 12s steps(1, end) infinite;
 }
 
 .star1 {
-    width: 60px;
-    top: 20%;
-    left: 15%;
+    width: 50px;
+    top: 15%;
+    left: 10%;
+    animation-delay: 14s;
 }
 
 .star1-1 {
     width: 40px;
-    top: 60%;
-    left: 85%;
+    top: 80%;
+    left: 70%;
+    animation-delay: 12s;
 }
 
 .star2 {
-    width: 50px;
+    width: 30px;
     top: 15%;
     right: 15%;
+    animation-delay: 4s;
 }
 
 .star2-1{
-    width: 40px;
+    width: 20px;
     top: 50%;
-    left: 25%;
+    left: 20%;
+    animation-delay: 6s;
 }
 
 
 .star3 {
-    width: 30px;
-    bottom: 20%;
-    left: 70%;
+    width: 25px;
+    bottom: 40%;
+    left: 90%;
+    animation-delay: 2s;
 }
 
 .star3-1 {
     width: 40px;
     bottom: 25%;
     left: 10%;
+    animation-delay: 10s;
 }
+
+@keyframes twinkle {
+    0%, 85%, 100% {
+        transform: scale(0.8);
+    }
+
+    88% {
+        transform: scale(0.9);
+    }
+
+    91% {
+        transform: scale(1.15);
+    }
+
+    94% {
+        transform: scale(0.9);
+    }
+
+    97% {
+        transform: scale(0.8);
+    }
+}
+
 
 h1{
     font-size: 90px;
