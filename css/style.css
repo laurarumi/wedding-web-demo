@@ -177,6 +177,7 @@ h1{
 
 
 
+
 /*information section*/
 .information {  
     padding: 50px 20px;
@@ -184,7 +185,7 @@ h1{
 
     background-color: #FBE4E4;
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     box-sizing: border-box;
 }
 
@@ -194,11 +195,13 @@ h1{
     gap: 20px;
     flex-wrap: wrap;   
     align-items: flex-start;
+
     height: 50px;
 }
 
+
 .extra-info {
-    margin-top: 90px;
+    margin-top: 120px;
 }
 
 .information h2 {
@@ -212,7 +215,27 @@ h1{
 .info-item {
     flex: 1;
     min-width: 180px;
+    position: relative;
 }
+
+.info-details {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin-top: 10px;
+
+    opacity: 0;
+    transform: translateY(-8px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.info-details.is-open {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
 
 .info-button {
     background-color: #950E0E;
@@ -231,17 +254,6 @@ h1{
     color: #FBE4E4;
 }
 
-.info-details {
-    margin-top: 10px;
-    opacity: 0;
-    transform: translateY(-8px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.info-details.is-open {
-    opacity: 1;
-    transform: translateY(0);
-}
 
 .info-details p {
     margin: 0;
@@ -265,11 +277,12 @@ h1{
 
 /*rsvp section*/
 .rsvp {
-    padding: 50px 20px;
+    padding: 40px 20px;
     background-color: #706179;
     color: #FBE4E4;
     text-align: center;
     position: relative;
+    height: 100vh;
 }
 
 .decor {
