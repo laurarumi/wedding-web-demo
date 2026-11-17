@@ -39,7 +39,7 @@ function updateStoryDoors() {
     const windowHeight = window.innerHeight;
 
     // Progress from 0 (closed) to 1 (fully open)
-  const scrollDistance = window.innerHeight * 1.4;
+  const scrollDistance = window.innerHeight * 0.7;
 
 const progress = Math.max(
     0,

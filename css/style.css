@@ -111,7 +111,7 @@ h1{
     text-align: center;
     font-size: 24px;
     margin: 0;
-    padding:35px;
+    padding:28px;
     font-weight: 400;
 }
 
@@ -471,21 +471,78 @@ footer {
 @media (max-width: 360px) {
 
     h1, .information h2, .rsvp h2 {
-        font-size: 35px;
+        font-size: 40px;
     }
 
 
-    .main-hero p {
-        font-size: 20px;
-    }
-
+    
     p{
         font-size: 18px;
     }
 
+/* Main hero adjustments for small screens */
+    .main-hero {
+        height: 100svh;
+        min-height: 100svh;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+    }
+
+    h1 {
+        margin-top: 80px;
+        font-weight: 600;
+        order: 1;
+    }
 
     .main-hero-img {
-        width: 45%;
+        width: 50%;
+        height: auto;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        order: 2;
+    }
+
+    .main-hero p {
+        font-size: 20px;
+        order: 3;
+    }
+
+    .star2-1,
+    .star3,
+    .star3-1 {
+        display: none;
+    }
+
+    .stars-mobile .decoration {
+    position: static;
+    width: 7%;
+    }
+
+    .stars-mobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        order: 4;
+        padding-top: 30px;
+    }
+
+
+    /*story section adjustments for small screens */
+
+    .story-photos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        margin-top: 120px;
+    }
+
+    .story-photos img{
+        width: 70%;
         height: auto;
     }
+
+
 }
