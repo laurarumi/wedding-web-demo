@@ -62,6 +62,52 @@ window.addEventListener("resize", updateStoryDoors);
 
 updateStoryDoors();
 
+const storyImages = document.querySelectorAll(
+    ".story-photo1 img, .story-photo2 img"
+);
+
+storyImages.forEach(image => {
+
+    let startX = 0;
+    let startY = 0;
+    let currentX = 0;
+    let currentY = 0;
+
+    image.addEventListener("pointerdown", event => {
+        event.preventDefault();
+
+        image.setPointerCapture(event.pointerId);
+
+        startX = event.clientX - currentX;
+        startY = event.clientY - currentY;
+
+        image.style.transition = "none";
+    });
+
+    image.addEventListener("pointermove", event => {
+        if (!image.hasPointerCapture(event.pointerId)) return;
+
+        currentX = event.clientX - startX;
+        currentY = event.clientY - startY;
+
+        image.style.transform =
+            `translate(${currentX}px, ${currentY}px)`;
+    });
+
+    function returnImage() {
+        image.style.transition = "transform 0.4s ease";
+
+        currentX = 0;
+        currentY = 0;
+
+        image.style.transform = "translate(0, 0)";
+    }
+
+    image.addEventListener("pointerup", returnImage);
+    image.addEventListener("pointercancel", returnImage);
+
+});
+
 
 
 
