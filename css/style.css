@@ -511,7 +511,7 @@ footer {
 
 /*media queries*/
 
-@media (max-width: 360px) {
+@media (max-width: 440px) {
 
     h1, .information h2, .rsvp h2 {
         font-size: 40px;
@@ -603,12 +603,13 @@ footer {
 
     .information-content {
         gap: 40px;
-    }
-
-    .information-item {
-        display: flex;
         flex-direction: column;
         justify-content: center;
+        
+    }
+
+    .info-item {
+        
     }
 
     .info-button {
