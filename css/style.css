@@ -350,6 +350,7 @@ h1{
     align-items: center;
     accent-color: #FBE4E4;
     max-width: 450px;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -602,15 +603,16 @@ footer {
     }
 
     .information-content {
-        gap: 40px;
-        flex-direction: column;
-        justify-content: center;
-        
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    height: auto;
+    flex-wrap: nowrap;
+}
 
-    .info-item {
-        
-    }
+
 
     .info-button {
         font-size: 16px;
@@ -633,10 +635,15 @@ footer {
     }
 
     .extra-info {
-        margin-top: 178px;      
+        margin-top: 100px;      
     }
 
     /*rsvp section adjustments for small screens */
+
+
+    .rsvp-form {
+        width: 90%;
+    }
 
     .rsvp-form label {
         font-size: 18px;
