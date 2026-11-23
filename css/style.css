@@ -35,14 +35,14 @@ h1, h2, button, .info-button, .footer-message {
 .star1-1 {
     width: 40px;
     top: 80%;
-    left: 70%;
+    left: 80%;
     animation-delay: 12s;
 }
 
 .star2 {
     width: 30px;
     top: 15%;
-    right: 15%;
+    right: 10%;
     animation-delay: 4s;
 }
 
@@ -52,7 +52,6 @@ h1, h2, button, .info-button, .footer-message {
     left: 20%;
     animation-delay: 6s;
 }
-
 
 .star3 {
     width: 25px;
@@ -333,6 +332,13 @@ h1{
     animation: twinkle 12s steps(1, end) infinite;
 }
 
+.rsvp .star1 { animation-delay: 1s; }
+.rsvp .star2 { animation-delay: 5s; }
+.rsvp .star3 { animation-delay: 8s; }
+.rsvp .star1-1 { animation-delay: 11s; }
+.rsvp .star2-1 { animation-delay: 3s; }
+.rsvp .star3-1 { animation-delay: 6s; }
+
 .rsvp h2 {
     font-size: 90px;
     font-weight: 400;
@@ -479,19 +485,20 @@ footer {
     background-color: #950E0E;
     color: #FBE4E4;
     text-align: center;
-    padding: 30px 0;
+    padding: 20px 0;
 }
 
 .footer-message {
     font-size: 24px;
     font-weight: 600;
     margin: 0;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
 }
 
 .credit {
-   font-size: 14px;
+   font-size: 12px;
     margin-top: 10px;
+    margin-bottom: 0px;
     opacity: 0.85;
 }
 
@@ -503,6 +510,7 @@ footer {
 .credit img {
     vertical-align: middle;
     margin-left: 5px; 
+    width: 20px;
 }
 
 
@@ -537,9 +545,100 @@ footer {
     }
     
     .decoration {
-        width: 4%;
+        width: 3%;
     }
 
+    /*story section adjustments for medium screens */
+    .story {
+        height: 100svh;
+        min-height: 100svh;
+    }
+
+    .story-photos {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 200px;
+    }
+
+    .story-photo1,
+    .story-photo2 {
+        width: 45%;
+        height: auto;
+    }
+
+    /*information section adjustments for medium screens */
+
+    .information {
+        padding: 20px;
+        height: 100svh;
+        min-height: 100svh;
+    }
+
+    .info-button {
+        font-size: 20px;
+        padding: 8px 16px;
+    }
+
+    .info-details p {
+        font-size: 18px;
+    }
+
+    .info-details a {
+        font-size: 14px;
+    }
+
+    .extra-info {
+        margin-top: 80px;
+    }
+
+    /*rsvp section adjustments for medium screens */
+
+    .rsvp-form label {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .rsvp-form legend {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .rsvp-form input,
+    .rsvp-form select,
+    .rsvp-form textarea {
+        font-size: 16px;
+    }
+    
+    .rsvp-form button {
+        font-size: 20px;
+    }
+
+    .decor {
+        width: 3%;
+    }
+
+    /*footer section adjustments for medium screens */
+
+    footer {
+        padding: 15px;
+        text-align: center;
+    }
+
+    footer .footer-message {
+        font-size: 20px;
+    }
+
+    footer .credit {
+        font-size: 11px;
+        margin: 0;
+    }
+
+    .credit img {
+        width: 20px;
+        height: auto;
+    }
 }
 
 @media (max-width: 440px) {
@@ -613,7 +712,7 @@ footer {
         flex-direction: column;
         align-items: center;
         gap: 20px;
-        margin-top: 110px;
+        margin-top: 80px;
     }
 
     .story-photo1 ,
@@ -655,17 +754,17 @@ footer {
 
     .info-details p {
         font-size: 14px;
-        padding: 5px 10px;
+        padding: 3px 10px;
     }
 
     .info-details a {
-        font-size: 14px;
-        padding: 2px 10px;
+        font-size: 11px;
+        padding-bottom: 5px;
         margin-top: 0;
     }
 
     .extra-info {
-        margin-top: 100px;      
+        margin-top: 90px;      
     }
 
     /*rsvp section adjustments for small screens */
