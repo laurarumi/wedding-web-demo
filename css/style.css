@@ -29,35 +29,35 @@ h1, h2, button, .info-button, .footer-message {
     width: 50px;
     top: 15%;
     left: 10%;
-    animation-delay: 14s;
+    animation-delay: 4s;
 }
 
 .star1-1 {
     width: 40px;
     top: 80%;
     left: 80%;
-    animation-delay: 12s;
+    animation-delay: 2s;
 }
 
 .star2 {
     width: 30px;
     top: 15%;
     right: 10%;
-    animation-delay: 4s;
+    animation-delay: 6s;
 }
 
 .star2-1{
     width: 20px;
     top: 50%;
     left: 20%;
-    animation-delay: 6s;
+    animation-delay: 8s;
 }
 
 .star3 {
     width: 25px;
     bottom: 40%;
     left: 90%;
-    animation-delay: 2s;
+    animation-delay: 12s;
 }
 
 .star3-1 {
@@ -790,7 +790,7 @@ footer {
     .rsvp-form input,
     .rsvp-form textarea {   
         font-size: 16px;
-        padding: 10px 5px;
+        padding: 10px 10px;
     }
 
     .rsvp-form button {
