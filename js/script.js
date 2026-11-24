@@ -154,7 +154,33 @@ draggableImages.forEach(image => {
 });
 
 
+function updateInformationHeight() {
+    const section = document.querySelector(".information");
+    const openDetails = section.querySelectorAll(
+        ".info-details.is-open"
+    );
 
+    section.style.minHeight = "100svh";
+
+    const sectionRect = section.getBoundingClientRect();
+
+    let requiredHeight = sectionRect.height;
+
+    openDetails.forEach(details => {
+        const detailsRect = details.getBoundingClientRect();
+
+        const bottomPosition =
+            detailsRect.bottom - sectionRect.top + 30;
+
+        requiredHeight = Math.max(
+            requiredHeight,
+            bottomPosition
+        );
+    });
+
+    section.style.minHeight =
+        `max(100svh, ${requiredHeight}px)`;
+}
 
 const infoButtons = document.querySelectorAll(".info-button");
 
@@ -169,6 +195,7 @@ infoButtons.forEach(button => {
 
             setTimeout(() => {
                 details.hidden = true;
+                 updateInformationHeight();
             }, 300);
         } else {
             details.hidden = false;
@@ -176,6 +203,7 @@ infoButtons.forEach(button => {
             // Allow the browser to apply the initial styles first
             requestAnimationFrame(() => {
                 details.classList.add("is-open");
+                updateInformationHeight();
             });
 
             button.setAttribute("aria-expanded", "true");
