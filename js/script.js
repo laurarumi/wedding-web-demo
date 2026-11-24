@@ -3,6 +3,7 @@ const image = document.querySelector(".main-hero-img");
 const storyImages = document.querySelectorAll(
     ".story-photo1 .photo-inner, .story-photo2 .photo-inner"
 );
+const dragHint = document.querySelector(".drag-hint");
 
 
 function updateImageTransform() {
@@ -65,6 +66,10 @@ function updateStoryDoors() {
 
     wiggleTriggered = true;
 
+    setTimeout(() => {
+    dragHint.classList.add("visible");
+    }, 1000);
+
     // First wiggle after 5 seconds
     setTimeout(() => {
 
@@ -113,6 +118,8 @@ draggableImages.forEach(image => {
 
     image.addEventListener("pointerdown", event => {
         event.preventDefault();
+
+         dragHint.classList.add("hidden");
 
         image.setPointerCapture(event.pointerId);
 
