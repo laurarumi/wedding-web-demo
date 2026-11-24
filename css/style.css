@@ -754,10 +754,10 @@ footer {
 
     .information {
         padding: 15px;
-        height: 100svh;
         min-height: 100svh;
-    }
-
+        height: auto;
+        box-sizing: border-box;
+}
     .information h2 {
         margin: 25px 0; 
     }
